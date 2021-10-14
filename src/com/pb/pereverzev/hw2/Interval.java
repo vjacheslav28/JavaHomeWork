@@ -29,7 +29,7 @@ public class Interval {
             System.out.print("Ваше число " + interval + " попадает в интервал [51-100] ");
         }
         else if (interval <0 || interval > 101) {
-                System.out.print("Ваше число " + interval + " не попадает ни в один из интервалов");
+                System.out.print("Ваше число " + interval + " не попадает ни в один из интервалов [0-14] [15-35] [36-50] [51-100]");
           }
         }
       }
