@@ -1,5 +1,6 @@
-import java.util.Scanner;
 package com.pb.pereverzev.hw2;
+
+import java.util.Scanner;
 /*
 Создайте две целочисленных переменные с именами operand1 и operand2.
 Предложите ввести значения operand1 и operand2 пользователю.
@@ -11,26 +12,42 @@ package com.pb.pereverzev.hw2;
 И если таковая имеется, то отмените выполнение арифметической операции и уведомите об ошибке пользователя.
  */
 public class Calculator {
-    public static void main(String[] args) {
+    public static <Char> void main(String[] args) {
+        //Обьявляем переменные
         Scanner scan = new Scanner(System.in);
         int operand1;
         int operand2;
-        String symbol;
-
-        operand1=scan.nextIn();
-        System.out.print("Введите operand1: ");
-
-        operand2=scan.nextIn();
-        System.out.print("Введите operand2: ");
-
-        symbol=scan.next();
-        System.out.print("Введите знак: ");
-
-        //этот опреатор будет определять какой знак применить
-      /*  switch (operand1) {
-            case 1:
-                System.out.println("Отлично!");
-                break;*/
-
+        String sign="+-*/";
+//Блок отображения для пользоваетля
+        System.out.print("Введите целое число operand1: ");
+        operand1 = scan.nextInt();
+        System.out.print("Введите целое число operand2: ");
+        operand2 = scan.nextInt();
+        System.out.print("Введите арифметический знак: ");
+        sign = scan.next();
+//
+         char sign1 = sign.charAt(0);
+//switch(оператор сравенения) определяет какой знак применен
+        switch (sign1) {
+            case '+':
+                System.out.println("Результат выполнения арифметической операции = " + (operand1 + operand2));
+                break;
+            case '-':
+                System.out.println("Результат выполнения арифметической операции = " +(operand1-operand2));
+                break;
+            case '*':
+                System.out.println("Результат выполнения арифметической операции = " + (operand1 * operand2));
+                break;
+            case '/':
+         //проверка для уведомления пользователюделения на 0
+                try {
+                System.out.println("Результат выполнения арифметической операции = " + (operand1 / operand2));
+                } catch (Exception ex) {
+                    System.out.println("Деление на 0 не возможно!!!" + ex);
+                }
+                break;
+            default:
+                System.out.println("Операция не распознана. Повторите ввод.");
     }
+  }
 }
