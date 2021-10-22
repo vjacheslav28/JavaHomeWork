@@ -18,8 +18,6 @@ public class Bingo {
             Scanner scan = new Scanner(System.in);
             //Рандомный выбер чисел
             Random random = new Random();
-            //Обьявляем переменные
-            int operand1;
             // Счет попыток
             int attempt = 0;
             //случаные числа
@@ -28,12 +26,11 @@ public class Bingo {
             System.out.println("Угадайте задуманное целое число.");
             System.out.print("Введите целое число от 0 - 100: ");
             System.out.println("\nДля выхода из игры введите -1");
-            operand1 = scan.nextInt(); // вводимое число
             while (attempt <= x) {
                 attempt++;
                 //System.out.println("Попытка " + attempt + ":");
                //Присвоиваем значение
-                Integer value;
+                Integer value; //вводимое число
                 value = scan.nextInt();
                 if (value == -1) {
                     System.out.println("Вы вышли из игры");
