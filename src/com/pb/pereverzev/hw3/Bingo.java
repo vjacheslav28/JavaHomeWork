@@ -27,7 +27,7 @@ public class Bingo {
         System.out.println("Случайное число: " + x);
             System.out.println("Угадайте задуманное целое число.");
             System.out.print("Введите целое число от 0 - 100: ");
-            System.out.println("\nДля выхода из программы введите -1");
+            System.out.println("\nДля выхода из игры введите -1");
             operand1 = scan.nextInt(); // вводимое число
             while (attempt <= x) {
                 attempt++;
@@ -36,6 +36,7 @@ public class Bingo {
                 Integer value;
                 value = scan.nextInt();
                 if (value == -1) {
+                    System.out.println("Вы вышли из игры");
                     break;
                 }
 
@@ -47,7 +48,7 @@ public class Bingo {
                         if (x < value)
                             System.out.println("Ваше число " + value + " больше загаданного ");
                       } catch (Exception ex) {
-                        System.out.println("Errors - не допустимый формат"+ex);
+                        //System.out.println("Errors - не допустимый формат"+ex);
                     }
                     continue;
                 }
