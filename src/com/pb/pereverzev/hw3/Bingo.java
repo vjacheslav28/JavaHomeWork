@@ -31,17 +31,18 @@ public class Bingo {
             while (attempt < x) {
                 attempt++;
                 System.out.println("Попытка " + attempt + ":");
-                Integer value = operand1.next();
+                Integer value;
+                value = scan.nextInt();
 
                 if (value==-1) {
                     break;
                 }
 
-                if (!value == x) {
+                if (value == x) {
                     continue;
                 }
 
-                System.out.println("Поздравляем, Вы угадали число с " + attempt + " попытки!");
+                System.out.println("Поздравляем, Вы угадали число " + value + " с " + attempt + " попытки!");
                 break;
             }
         }
