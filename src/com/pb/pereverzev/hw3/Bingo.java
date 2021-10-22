@@ -14,7 +14,6 @@ import java.util.Scanner;
 */
 public class Bingo {
     public static void main(String[] args) {
-        //for (int i = 0; i <= 100; i++) {
             //метод ввода пользователем с клавиатуры
             Scanner scan = new Scanner(System.in);
             //Рандомный выбер чисел
@@ -22,7 +21,7 @@ public class Bingo {
             //Обьявляем переменные
             int operand1;
             // Счет попыток
-            int attempt = 1;
+            int attempt = 0;
             //случаные числа
         int x = random.nextInt(101);//макс. вводимое число 100
         System.out.println("Случайное число: " + x);
@@ -30,15 +29,13 @@ public class Bingo {
             System.out.print("Введите целое число от 0 - 100: ");
             System.out.println("\nДля выхода из программы введите -1");
             operand1 = scan.nextInt(); // вводимое число
-            //int x = random.nextInt(101);//макс. вводимое число 100
-            //System.out.println("Случайное число: " + x);
             while (attempt <= x) {
                 attempt++;
-                System.out.println("Попытка " + attempt + ":");
-
+                //System.out.println("Попытка " + attempt + ":");
+               //Присвоиваем значение
                 Integer value;
                 value = scan.nextInt();
-                if (value==-1) {
+                if (value == -1) {
                     break;
                 }
 
@@ -50,7 +47,7 @@ public class Bingo {
                         if (x < value)
                             System.out.println("Ваше число " + value + " больше загаданного ");
                       } catch (Exception ex) {
-                        System.out.println("Errors - не допустимый формат");
+                        System.out.println("Errors - не допустимый формат"+ex);
                     }
                     continue;
                 }
@@ -62,4 +59,3 @@ public class Bingo {
         }
 
     }
-//}
