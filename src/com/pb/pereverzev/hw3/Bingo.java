@@ -14,7 +14,7 @@ import java.util.Scanner;
 */
 public class Bingo {
     public static void main(String[] args) {
-        for (int i = 0; i <= 100; i++) {
+        //for (int i = 0; i <= 100; i++) {
             //метод ввода пользователем с клавиатуры
             Scanner scan = new Scanner(System.in);
             //Рандомный выбер чисел
@@ -22,29 +22,44 @@ public class Bingo {
             //Обьявляем переменные
             int operand1;
             // Счет попыток
-            int attempt = 0;
+            int attempt = 1;
+            //случаные числа
+        int x = random.nextInt(101);//макс. вводимое число 100
+        System.out.println("Случайное число: " + x);
             System.out.println("Угадайте задуманное целое число.");
             System.out.print("Введите целое число от 0 - 100: ");
+            System.out.println("\nДля выхода из программы введите -1");
             operand1 = scan.nextInt(); // вводимое число
-            int x = random.nextInt(101);//макс. вводимое число 100
-            System.out.println("rand x: " + x);
-            while (attempt < x) {
+            //int x = random.nextInt(101);//макс. вводимое число 100
+            //System.out.println("Случайное число: " + x);
+            while (attempt <= x) {
                 attempt++;
                 System.out.println("Попытка " + attempt + ":");
+
                 Integer value;
                 value = scan.nextInt();
-
                 if (value==-1) {
                     break;
                 }
 
-                if (value == x) {
+                if (value != x) {
+                    try {
+                        if (x>value){
+                        System.out.println("Ваше число "+ value +" меньше загаданного " );
+                        }
+                        if (x < value)
+                            System.out.println("Ваше число " + value + " больше загаданного ");
+                      } catch (Exception ex) {
+                        System.out.println("Errors - не допустимый формат");
+                    }
                     continue;
                 }
 
                 System.out.println("Поздравляем, Вы угадали число " + value + " с " + attempt + " попытки!");
                 break;
             }
+            System.out.println("Конец игры!");
         }
+
     }
-}
+//}
