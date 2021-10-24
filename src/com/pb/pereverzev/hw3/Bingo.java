@@ -32,17 +32,6 @@ public class Bingo {
                //Присвоиваем значение
                 Integer value; //вводимое число
                 value = scan.nextInt();
-                /*try {
-                    if (value!= value.intValue()){
-                        System.out.println("ERRORS....");
-                    };
-                } catch (Exception ex) {
-                    //System.out.println("Errors - не допустимый формат"+ex);
-                }*/
-                /*if (value == 'd') {
-                    System.out.println("Ошибка ввода данных");
-                break;
-                }*/
                 if (value == -1) {
                     System.out.println("Вы вышли из игры");
                     break;
