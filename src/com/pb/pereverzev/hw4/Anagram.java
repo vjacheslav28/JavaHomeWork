@@ -1,6 +1,9 @@
 package com.pb.pereverzev.hw4;
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
+import java.util.Arrays;
 
 /*
 Напишите программу, которая определяет, является ли одна строка анаграммой другой строки.
@@ -13,15 +16,33 @@ import java.util.Scanner;
 При выполнении задания использовать метод(ы).
  */
 public class Anagram {
-    public static <Char> void main(String[] args) {
-        //Вызов ввода с клавиатуры
+    static boolean isAnagram(String word, String wordAnagramm) {
+        word = word.toLowerCase();
+        wordAnagramm = wordAnagramm.toLowerCase();
+        if (word.length() != wordAnagramm.length()) {
+            System.out.println("Errors length text!!!");
+            return false;
+        }
+        char[] chars = word.toCharArray();
+        for (char c : chars) {
+            int index = wordAnagramm.indexOf(c);
+            if (index != -1) {
+                wordAnagramm = wordAnagramm.substring(0, index) + wordAnagramm.substring(index + 1);//, wordAnagramm.length()
+            } else {
+                return false;
+            }
+        }
+        return wordAnagramm.isEmpty();
+    }
+//Блок ввода параметров
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        String word;
-        String wordAnagramm;
-//Блок отображения для пользоваетля
         System.out.println("Введите текст: ");
-        word = scan.next();
+        String word = scan.nextLine();
         System.out.println("Введите текст Анаграмма: ");
-        wordAnagramm = scan.next();
+        String wordAnagramm = scan.nextLine();
+        scan.close();
+        boolean rez = isAnagram(word, wordAnagramm);
+        System.out.println((rez) ? "Anagrams" : "Not Anagrams");
     }
 }
