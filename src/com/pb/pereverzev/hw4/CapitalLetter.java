@@ -9,21 +9,31 @@ package com.pb.pereverzev.hw4;
 При выполнении задания использовать метод(ы).
 */
 
+import org.jetbrains.annotations.NotNull;
+
 import java.util.Scanner;
 
 public class CapitalLetter {
-    static void procedure(){
+    //
+    public static void main(String[] args)
+    {
+       //Вызов сканера
         Scanner in = new Scanner(System.in);
-        String inText;
-        System.out.print("Введите текст: ");
-        inText = in.next();
-        String str=inText;
-        String strUpper = str.toUpperCase();
-        //inText = WordUtils.capitalize(inText);
-        System.out.print("Результат - " + inText);
-        System.out.print("Результат2 - " + strUpper);
+        System.out.print("Введите текст \"Истина — это то, что выдерживает проверку опытом\". Эйнштейн А.: ");
+        String inText = in.nextLine();
+        System.out.println("Результат - " + toUP(inText));
     }
-    public static void main(String[] args){
-        procedure();
+    public static String toUP(@NotNull String inText)
+    {
+        //-------------------
+        char[] result = inText.toCharArray();
+        if(Character.isAlphabetic(result[0]))result[0]=Character.toUpperCase(result[0]);
+        String res=""+result[0];
+        for(int i=1;i<result.length;i++)
+        {
+            if(Character.isAlphabetic(result[i]) && !Character.isAlphabetic(result[i-1]))result[i]=Character.toUpperCase(result[i]);
+            res+=result[i];
+        }
+        return res;
     }
 }
