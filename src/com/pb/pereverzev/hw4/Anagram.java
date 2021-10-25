@@ -1,7 +1,4 @@
 package com.pb.pereverzev.hw4;
-
-import org.jetbrains.annotations.NotNull;
-
 import java.util.Scanner;
 import java.util.Arrays;
 
@@ -27,7 +24,7 @@ public class Anagram {
         for (char c : chars) {
             int index = wordAnagramm.indexOf(c);
             if (index != -1) {
-                wordAnagramm = wordAnagramm.substring(0, index) + wordAnagramm.substring(index + 1);//, wordAnagramm.length()
+                wordAnagramm = wordAnagramm.substring(0, index) + wordAnagramm.substring(index + 1);
             } else {
                 return false;
             }
@@ -37,9 +34,9 @@ public class Anagram {
 //Блок ввода параметров
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        System.out.println("Введите текст: ");
+        System.out.println("Введите оригинальный текст: ");
         String word = scan.nextLine();
-        System.out.println("Введите текст Анаграмма: ");
+        System.out.println("Введите текст \"Анаграмм\": ");
         String wordAnagramm = scan.nextLine();
         scan.close();
         boolean rez = isAnagram(word, wordAnagramm);
