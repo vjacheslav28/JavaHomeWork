@@ -1,4 +1,7 @@
 package com.pb.pereverzev.hw4;
+
+import java.util.Scanner;
+
 /*
 Напишите программу, которая определяет, является ли одна строка анаграммой другой строки.
 Обе строки вводит пользователь.
@@ -10,4 +13,15 @@ package com.pb.pereverzev.hw4;
 При выполнении задания использовать метод(ы).
  */
 public class Anagram {
+    public static <Char> void main(String[] args) {
+        //Вызов ввода с клавиатуры
+        Scanner scan = new Scanner(System.in);
+        String word;
+        String wordAnagramm;
+//Блок отображения для пользоваетля
+        System.out.println("Введите текст: ");
+        word = scan.next();
+        System.out.println("Введите текст Анаграмма: ");
+        wordAnagramm = scan.next();
+    }
 }
