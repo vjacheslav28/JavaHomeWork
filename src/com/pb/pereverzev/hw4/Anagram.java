@@ -14,8 +14,8 @@ import java.util.Arrays;
  */
 public class Anagram {
     static boolean isAnagram(String word, String wordAnagramm) {
-        word = word.toLowerCase();
-        wordAnagramm = wordAnagramm.toLowerCase();
+        word = word.toLowerCase().replaceAll("[\\W]", "");
+        wordAnagramm = wordAnagramm.toLowerCase().replaceAll("[\\W]", "");;
         if (word.length() != wordAnagramm.length()) {
             System.out.println("Errors length text!!!");
             return false;
