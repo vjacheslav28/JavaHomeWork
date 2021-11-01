@@ -28,4 +28,11 @@ public class Book {
         public void setYearPublishing(int yearPublishing) {
                 this.yearPublishing = yearPublishing;
         }
+/*
+Имеет перегруженные методы takeBook(), returnBook():
+- takeBook, который будет принимать количество взятых книг.
+Выводит на консоль сообщение
+"Петров В. В. взял 3 книги".
+ */
+
 }

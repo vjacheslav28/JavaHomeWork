@@ -46,4 +46,8 @@ public class Reader {
     public void setPhone(int phone) {
         this.phone = phone;
     }
+
+    String getInfo() {
+        return "модель: " + fio;
+    }
 }

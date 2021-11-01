@@ -16,7 +16,7 @@ public class Library {
         book3.setAutorBook("Гусев К. В.");
         book3.setName("Энциклопедия");
         book3.setYearPublishing(2010);
-System.out.println("FIO - " + reader.fio);
+        //System.out.println(Reader.);
 
     }
 }
