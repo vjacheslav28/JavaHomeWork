@@ -1,22 +1,30 @@
 package com.pb.pereverzev.hw5;
 
-public class Library {
-    public static void main(String[] args){
-        Reader reader = new Reader();
-        reader.fio = "Петров В. В.";
-        Book book1 =new Book();
-        Book book2 =new Book();
-        Book book3 =new Book();
-        book1.setAutorBook("Иванов И. И.");
-        book1.setName("Приключения");
-        book1.setYearPublishing(2000);
-        book2.setAutorBook("Сидоров А. В");
-        book2.setName("Словарь");
-        book2.setYearPublishing(1980);
-        book3.setAutorBook("Гусев К. В.");
-        book3.setName("Энциклопедия");
-        book3.setYearPublishing(2010);
-        //System.out.println(Reader.);
+import static com.pb.pereverzev.hw5.Book.getCountBooks;
+//import static com.pb.pereverzev.hw5.Reader.getCountReaders;
 
+public class Library {
+    public static void main(String[] args) {
+        Book book0 = new Book("Приключения","Иванов И.И.",2000);
+        Book book1 = new Book("Словарь","Сидоров А.В.",1980);
+        Book book2 = new Book("Энциклопедия","Гусев К.В.",2010);
+
+        Reader reader1 = new Reader("Петров В.В.","qwe1234");
+
+        System.out.println("Всего в библиотеке "+getCountBooks()+" книг:");
+        book0.getInfo();
+        book1.getInfo();
+        book2.getInfo();
+        System.out.println("[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]");
+        System.out.println("Всего в библиотеке зарегистрировано -1");//+getCountReaders()+" читателей:");
+        reader1.getInfo();
+        System.out.println("[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]");
+        reader1.takeBook(3);
+        reader1.takeBook(book1.getBookName(), book2.getBookName(),book0.getBookName());
+        reader1.takeBook(book1,book2);
+        System.out.println("[+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++]");
+        reader1.returnBook(3);
+        reader1.returnBook(book1.getBookName(), book2.getBookName(), book0.getBookName());
+        reader1.returnBook(book1,book2,book0);
     }
 }

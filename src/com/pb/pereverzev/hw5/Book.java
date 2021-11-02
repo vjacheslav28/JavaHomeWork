@@ -1,38 +1,47 @@
 package com.pb.pereverzev.hw5;
 
 public class Book {
-        String name;        //название
-        String autorBook;   //автор книги
-        int yearPublishing; // год издания
+        //подсчет кол-ва книг
+        private static int countBooks = 0;
 
-        public String getName(String name) {
-                return name;
+        public static int getCountBooks() {
+                return countBooks;
+        }
+        private String bookName;    //название
+        private String autorBook;   //автор книги
+        private int yearPublishing; // год издания
+//
+        public Book(String bookName, String autorBook) {
+                this.bookName = bookName;
+                this.autorBook = autorBook;
+                //this.yearPublishing = yearPublishing;
+                countBooks++;
+        }
+        public Book(String bookName, String autorBook, int yearPublishing) {
+                this.bookName = bookName; //+countBooks;
+                this.autorBook = autorBook;// +countBooks;
+                this.yearPublishing = yearPublishing;
+                countBooks++;
+
         }
 
-        public void setName(String name) {
-                this.name = name;
+        public String getBookName() {
+                return bookName;
         }
 
-        public String getAutorBook(String AutorBook) {
+        public String getBookAuthor() {
                 return autorBook;
         }
 
-        public void setAutorBook(String autorBook) {
-                this.autorBook = autorBook;
-        }
-
-        public int getYearPublishing(Integer getYearPublishing) {
+        public int getBookYear() {
                 return yearPublishing;
         }
 
-        public void setYearPublishing(int yearPublishing) {
-                this.yearPublishing = yearPublishing;
+        /*
+          Выводим информированицию о состоянии объекта - книги.
+         */
+        public void getInfo(){
+                System.out.println("Книгу \""+ bookName +"\" написал "+autorBook+" в "+yearPublishing+" году.");
         }
-/*
-Имеет перегруженные методы takeBook(), returnBook():
-- takeBook, который будет принимать количество взятых книг.
-Выводит на консоль сообщение
-"Петров В. В. взял 3 книги".
- */
 
 }
