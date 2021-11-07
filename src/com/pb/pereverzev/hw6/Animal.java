@@ -21,31 +21,18 @@ public class Animal {
         this.food = food;
         this.location = location;
         this.noise = noise;
+    }
         //--****************************************************
         public String getFood () {
             return food;
         }
-
-        public void setFood (String food){
-            this.food = food;
-        }
-
-        public String getLocation () {
+        public String getLocation() {
             return location;
         }
-
-        public void setLocation (String location){
-            this.location = location;
-        }
-
         public String getNoise () {
             return noise;
         }
-
-        public void setNoise (String noise){
-            this.noise = noise;
-        }
-//информирование,что живоное издает звуки
+        //информирование,что живоное издает звуки
         public void makeNoise() {
             System.out.println("Животное издает звуки: " + noise + ".");
         }
@@ -65,4 +52,4 @@ public class Animal {
                     + ".");
         }
     }
-}
+
