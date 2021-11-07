@@ -3,17 +3,18 @@ package com.pb.pereverzev.hw6;
 import java.util.Objects;
 
     public class Horse extends Animal{
-        private boolean introductory = false;
+        private boolean isIntroductory = false;
 
 //         * Наследуем  конструктор
         public Horse() {
+
             super("корм","стойле","иго-го");
         }
 // introductory определяем где находится лощадь в стойле или нет.
 //introductory
-        public Horse(boolean introductory) {
+        public Horse(boolean isIntroductory) {
             super("корм","стойле","иго-го");
-            this.introductory = introductory;
+            this.isIntroductory = isIntroductory;
 
         }
          // Переопределяем метод
@@ -31,7 +32,7 @@ import java.util.Objects;
         @Override
         public void getInfo() {
             String intro = "";
-            if(introductory) {
+            if(isIntroductory) {
                 intro = intro + "подкован";
             }
             else {
@@ -46,7 +47,7 @@ import java.util.Objects;
         @Override
         public String toString() {
             return "Конь{" +
-                    "introductory=" + introductory +
+                    "isIntroductory=" + isIntroductory +
                     '}';
         }
 
@@ -56,18 +57,17 @@ import java.util.Objects;
             if (o == null || getClass() != o.getClass())
                 return false;
             Horse horse = (Horse) o;
-            return introductory == horse.introductory;
+            return isIntroductory == horse.isIntroductory;
         }
 
         @Override
         public int hashCode() {
 
-            return Objects.hash(introductory);
+            return Objects.hash(isIntroductory);
         }
 // для определения подкована лошадь или нет
-        public boolean introductory() {
-
-            return introductory;
+        public boolean getIsIntroductory() {
+            return isIntroductory;
         }
     }
 

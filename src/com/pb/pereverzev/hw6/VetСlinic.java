@@ -7,7 +7,7 @@ import java.lang.reflect.InvocationTargetException;
 class VetClinic {
 
     public static void main(String[] args) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException {
-        int encounter = 1;
+        int encounter = 0;
 
         Dog myDog1 = new Dog();
         Dog myDog2 = new Dog(true,"Немецкая овчарка");
