@@ -6,13 +6,15 @@ public class Dog extends Animal{
 
         private boolean isDogBreed = false;
         private String dogBreed = "Немецкая овчарка";
+
         public Dog() {
+
                 super("мясо","дворе","гав-гав");
         }
 
    //породистая или нет
             public Dog(boolean isDogBreed, String dogBreed) {
-                super("мясо","двор","гав");
+                super(" мясо "," дворе ","гав");
                 this.isDogBreed = isDogBreed;
                 this.dogBreed = dogBreed;
         }
@@ -30,24 +32,24 @@ public class Dog extends Animal{
 //собока породистая или нет
         @Override
         public void getInfo() {
-                String breed = "";
+                String breedDog = "";
                 if(isDogBreed) {
-                        breed = breed + "обученная команд";
+                        breedDog = breedDog + " обученная команд ";
                 }
                 else {
-                        breed = breed + "не обученная команд";
+                        breedDog = breedDog + " не обученная команд ";
                 }
-                System.out.println("Эта собака " + breed + " кушает " + getFood()
+                System.out.println("Эта собака " + breedDog + " кушает " + getFood()
                         + ", живет во " + getLocation()
                         + ", издает " + getNoise() + "-" + getNoise()
-                        + " и порода ее " + getDogbreed());
+                        + " и порода ее " + getDogBreed());
         }
 
         @Override
         public String toString() {
-                return "Dog{" +
-                        "isdogbreed=" + isDogBreed +
-                        ", dogbreed='" + dogBreed + '\'' +
+                return "Собака{" +
+                        "isDogBreed=" + isDogBreed +
+                        ", dogBreed='" + dogBreed + '\'' +
                         '}';
         }
 
@@ -68,7 +70,7 @@ public class Dog extends Animal{
                 return isDogBreed;
         }
 
-        public String getDogbreed() {
+        public String getDogBreed() {
                 return dogBreed;
         }
 }

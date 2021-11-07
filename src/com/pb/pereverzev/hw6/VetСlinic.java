@@ -15,12 +15,11 @@ class VetClinic {
         Cat myCat2 = new Cat(" пушистый ");
         Horse myHorse1 = new Horse(true);
         Horse myHorse2 = new Horse();
-        //Animal tRex = new Animal("человеки","парк юрского периода","рррррррррррр");
 
         Animal[] myAnimals = new Animal[] {myDog1,myDog2,myCat1,myCat2,myHorse1,myHorse2};
 
-        // Выведем общую информацию об этом дивном питомнике.
-        System.out.println("Позвольте мне рассказать об этом дивном питомнике: ");
+        // Выведем общую Информация о животных.
+        System.out.println("Информация о животных: ");
         for(Animal anims : myAnimals) {
             System.out.print(encounter + ". ");
             anims.getInfo();
@@ -29,13 +28,13 @@ class VetClinic {
 
         // Проверим состояния некоторых животных.
         System.out.println("------------------------------------");
-        System.out.println("myDog1");
+        System.out.println("Моя собака");
         myDog1.makeNoise();
         System.out.println("------------------------------------");
-        System.out.println("myCat2");
+        System.out.println("Мой кот");
         myCat2.eat();
         System.out.println("------------------------------------");
-        System.out.println("myHorse1");
+        System.out.println("Мой конь");
         myHorse1.sleep();
         System.out.println("------------------------------------");
 

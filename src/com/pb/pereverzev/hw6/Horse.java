@@ -45,7 +45,7 @@ import java.util.Objects;
 
         @Override
         public String toString() {
-            return "Horse{" +
+            return "Конь{" +
                     "introductory=" + introductory +
                     '}';
         }
@@ -53,17 +53,20 @@ import java.util.Objects;
         @Override
         public boolean equals(Object o) {
             if (this == o) return true;
-            if (o == null || getClass() != o.getClass()) return false;
+            if (o == null || getClass() != o.getClass())
+                return false;
             Horse horse = (Horse) o;
             return introductory == horse.introductory;
         }
 
         @Override
         public int hashCode() {
+
             return Objects.hash(introductory);
         }
 // для определения подкована лошадь или нет
         public boolean introductory() {
+
             return introductory;
         }
     }

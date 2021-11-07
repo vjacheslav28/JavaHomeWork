@@ -34,15 +34,15 @@ public class Animal {
         }
         //информирование,что живоное издает звуки
         public void makeNoise() {
-            System.out.println("Животное издает звуки: " + noise + ".");
+            System.out.println("Издает звуки: " + noise + ".");
         }
 //информирование,что живоное есть
         public void eat() {
-            System.out.println("Животное ест " + food + ".");
+            System.out.println("Ест " + food + ".");
         }
 //информирование,что живоное есть
         public void sleep(){
-            System.out.println("Животное спит.");
+            System.out.println("спит.");
         }
 //Инормацию о животном
         public void getInfo() {

@@ -4,22 +4,22 @@ import java.util.Objects;
 
 public class Cat extends Animal{
 
-    private String catfluffy = "не определен";
+    private String catfluffy = " не пушистый";
 //настедование
     public Cat() {
-        super("рыбу","дом","мяу-мяу");
+        super("рыбу","доме","мур-мур");
     }
 
 //переопределяем пушистый кот или нет
     public Cat(String catfluffy) {
-        super("рыбу","дом","мяу");
+        super("рыбу","доме","мурррррр");
         this.catfluffy = catfluffy;
     }
 //переопределение путем расширения
     @Override
     public void makeNoise() {
         super.makeNoise();
-        System.out.println("Кот издает мурчание кгда ему хорошо!");
+        System.out.println("Кот издает мурчание когда ему хорошо!");
     }
 //расширяем метод
     @Override
@@ -31,15 +31,13 @@ public class Cat extends Animal{
     @Override
     public void getInfo() {
         System.out.println("Этот " + catfluffy + " кот "
-                + " любит " + getFood() + " как еду"
-                + ", решил, что его " + getLocation() + " это наш дом"
-                + " и радует нас своим хриплым " + getNoise() + ".");
+                + " любит " + getFood() + " и живет в  " + getLocation() + " и успакаивает своим " + getNoise() + ".");
     }
 
     @Override
     public String toString() {
-        return "Cat{" +
-                "catColour='" + catfluffy + '\'' +
+        return "Кот{" +
+                "catfluffy='" + catfluffy + '\'' +
                 '}';
     }
 
@@ -55,11 +53,7 @@ public class Cat extends Animal{
     public int hashCode() {
         return Objects.hash(catfluffy);
     }
-
-    /**
-     * Добаим сеттер только для вывода описания окраса кота.
-     * Остальные сеттеры достались по наследству от Animal.
-     */
+//выводим информацию об шерсти кота
     public String getCatFluffy() {
         return catfluffy;
     }
