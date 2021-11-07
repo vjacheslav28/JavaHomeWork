@@ -5,7 +5,7 @@ import java.util.Objects;
 public class Dog extends Animal{
 
         private boolean isDogBreed = false;
-        private String dogBreed = "Нtмецка овчарка";
+        private String dogBreed = "Немецкая овчарка";
         public Dog() {
                 super("мясо","дворе","гав-гав");
         }
@@ -37,7 +37,7 @@ public class Dog extends Animal{
                 else {
                         breed = breed + "не обученная команд";
                 }
-                System.out.println("Эта собака" + breed + " кушает " + getFood()
+                System.out.println("Эта собака " + breed + " кушает " + getFood()
                         + ", живет во " + getLocation()
                         + ", издает " + getNoise() + "-" + getNoise()
                         + " и порода ее " + getDogbreed());

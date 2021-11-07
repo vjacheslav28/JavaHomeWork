@@ -60,7 +60,7 @@ public class Cat extends Animal{
      * Добаим сеттер только для вывода описания окраса кота.
      * Остальные сеттеры достались по наследству от Animal.
      */
-    public String getCatColour() {
+    public String getCatFluffy() {
         return catfluffy;
     }
 }
