@@ -24,7 +24,7 @@ public void getDescription(){
  System.out.println("Описание - " + Description);
 }
     //метод возрващающий европейский размер
-public void EuroSize(){
+public void getEuroSize(){
     System.out.println("Европейский размер - " + EuroSize);
 }
 }
