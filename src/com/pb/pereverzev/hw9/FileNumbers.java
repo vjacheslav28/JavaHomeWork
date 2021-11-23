@@ -8,6 +8,15 @@ import java.util.List;
 import java.util.ArrayList;
 public class FileNumbers {
     /*
+    В пакете hw9 создать класс FileNumbers.
+В нем создать методы:
+- createNumbersFile - создает текстовый файл "numbers.txt" заполненный случайными целыми числами от 1 до 99. 10 строк и по 10 чисел
+в каждой строке. Числа разделять пробелами.
+- createOddNumbersFile - читает файл "numbers.txt", и создает на основе него новый файл "odd-numbers.txt" в который входят
+все числа из "numbers.txt" только все четные заменены на 0.
+В методе main продемонстрировать работу методов createNumbersFile и createOddNumbersFile.
+     */
+    /*
      создаем метод создает массив случайных чисел и записывает их в файл "numbers.txt"
      catPath - путь к каталогу, где будут лежать файлы с данными
      srcFileName - имя файла с источником данных
