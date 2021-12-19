@@ -45,12 +45,12 @@ public class PhoneBook {
      */
     private static void contactInputManual(HashMap tHashMap) {
         String[] contact1Phones = {"+380681231212"};
-        String[] contact2Phones = {"+380501231212"};
+        String[] contact2Phones = {"+380508167352"};
         String[] contact3Phones = {"+380972342323"};
 
         Contact contact1 = new Contact("Анастасия", LocalDate.parse("2006-02-04"),
                 contact1Phones,"Новомосковск",LocalDateTime.now());
-        Contact contact2 = new Contact("Варвара",LocalDate.parse("2017-06-17"),
+        Contact contact2 = new Contact("Варвара",LocalDate.parse("2014-06-17"),
                 contact2Phones,"Новомосковск",LocalDateTime.now());
         Contact contact3 = new Contact("Вячеслав",LocalDate.parse("1987-10-28"),
                 contact3Phones,"Новомосковск", LocalDateTime.now());
@@ -368,7 +368,7 @@ public class PhoneBook {
                         contactSearchName(myContacts,"Варвара");
                         break;
                     case(32): System.out.println("Ищу контакт по номеру телефона");
-                        contactSearchPhone(myContacts,"+380508187839");
+                        contactSearchPhone(myContacts,"+380508167352");
                         break;
                     case(4): System.out.println("Показываю телефонную книгу");
                         contactShow(myContacts);
@@ -377,10 +377,10 @@ public class PhoneBook {
                         contactShowSortByName(myContacts);
                         break;
                     case(51): System.out.println("Редактирую имя контакта");
-                        contactEditName(myContacts,"Антон","Платон");
+                        contactEditName(myContacts,"Вячеслав","Вова");
                         break;
                     case(52): System.out.println("Редактирую дату рождения контакта");
-                        contactEditBday(myContacts,"Варвара",LocalDate.parse("2017-12-31"));
+                        contactEditBday(myContacts,"Варвара",LocalDate.parse("2014-06-17"));
                         break;
                     case(6): System.out.println("Сохраняю телефонную книгу в файл json");
                         contactSaveToFile(myContacts,jsonPath,jsonFileName);
