@@ -1,0 +1,23 @@
+{
+  "contact1" : {
+    "contactFIO" : "Анастасия",
+    "contactBDAY" : "2006-02-04",
+    "contactPHONES" : [ "+380681231212" ],
+    "contactADRESS" : "Новомосковск",
+    "contactMODIFYDT" : "2021-12-19T10:26:11.731"
+  },
+  "contact3" : {
+    "contactFIO" : "Вячеслав",
+    "contactBDAY" : "1987-10-28",
+    "contactPHONES" : [ "+380972342323" ],
+    "contactADRESS" : "Новомосковск",
+    "contactMODIFYDT" : "2021-12-19T10:26:11.747"
+  },
+  "contact2" : {
+    "contactFIO" : "Варвара",
+    "contactBDAY" : "2017-06-17",
+    "contactPHONES" : [ "+380501231212" ],
+    "contactADRESS" : "Новомосковск",
+    "contactMODIFYDT" : "2021-12-19T10:26:11.747"
+  }
+}
